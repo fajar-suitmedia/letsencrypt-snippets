@@ -65,3 +65,10 @@ $ docker cp nginx-certbot:/etc/letsencrypt .
 - copy file dari /etc/letsencrypt/live/example.com/privkey.pem #ssl_certificate_key
 - file dh-param.pem #ssl_dhparam
 - options-ssl-nginx.conf #include
+- example:
+```
+ssl_certificate /etc/nginx/ssl/origin/fullchain.pem; 
+ssl_certificate_key /etc/nginx/ssl/origin/privkey.pem; 
+include /etc/nginx/ssl/origin/options-ssl-nginx.conf; 
+ssl_dhparam /etc/nginx/ssl/origin/ssl-dhparams.pem; 
+```
