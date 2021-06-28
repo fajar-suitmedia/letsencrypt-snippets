@@ -72,3 +72,8 @@ ssl_certificate_key /etc/nginx/ssl/origin/privkey.pem;
 include /etc/nginx/ssl/origin/options-ssl-nginx.conf; 
 ssl_dhparam /etc/nginx/ssl/origin/ssl-dhparams.pem; 
 ```
+
+## Self Signed SSL Certificate
+```
+$ openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out cert.crt -keyout cert.key
+```
